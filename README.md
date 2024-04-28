@@ -144,31 +144,31 @@ This table (Table 1) shows the total number of detected objects (confidence of 0
 
 Observations Across Categories
 
-Cars: Figure 6 shows a peak in the late afternoon (15:00 - 16:00) with an average count of approximately 46 cars. This likely corresponds to the end of the typical workday, indicating a rush hour effect. The morning hours also show increased traffic around 8:00, with 21 cars on average, suggesting morning commute patterns. The lowest car activity is observed in the early morning (4:00 - 6:00), with counts near or below 1, reflecting the quietest hours on the streets.
+**Cars**: Figure 6 shows a peak in the late afternoon (15:00 - 16:00) with an average count of approximately 46 cars. This likely corresponds to the end of the typical workday, indicating a rush hour effect. The morning hours also show increased traffic around 8:00, with 21 cars on average, suggesting morning commute patterns. The lowest car activity is observed in the early morning (4:00 - 6:00), with counts near or below 1, reflecting the quietest hours on the streets.
 
-Buses: Figure 7 shows a more consistent presence throughout the day compared to cars, with a slight increase during typical commuting hours (7:00 - 9:00 and 15:00 - 16:00). The average bus count peaks at 5.85 around 15:00, which could be associated with school or work schedules. Moreover, nighttime and early morning hours (0:00 - 5:00) see the least bus activity, as expected.
+**Buses**: Figure 7 shows a more consistent presence throughout the day compared to cars, with a slight increase during typical commuting hours (7:00 - 9:00 and 15:00 - 16:00). The average bus count peaks at 5.85 around 15:00, which could be associated with school or work schedules. Moreover, nighttime and early morning hours (0:00 - 5:00) see the least bus activity, as expected.
 
-Trucks: Figure 8 presents a normal pattern, with activity starting to increase at 7:00 and peaking at 9:00 with an average of 4.28 trucks. This suggests that trucks may be operating on a schedule that aims to avoid the heaviest commuter traffic or that aligns with delivery times for businesses opening hours.
+**Trucks**: Figure 8 presents a normal pattern, with activity starting to increase at 7:00 and peaking at 9:00 with an average of 4.28 trucks. This suggests that trucks may be operating on a schedule that aims to avoid the heaviest commuter traffic or that aligns with delivery times for businesses opening hours.
 
-Persons: As can be seen in Figure 9, the pedestrian traffic peaks in the afternoon (13:00 - 16:00), with the highest activity at 13:00, showing an average of 26 individuals. This could due to lunchtime activities. Another notable increase is observed in the late evening (18:00 - 19:00), possibly indicating leisure or shopping activities after work.
+**Persons**: As can be seen in Figure 9, the pedestrian traffic peaks in the afternoon (13:00 - 16:00), with the highest activity at 13:00, showing an average of 26 individuals. This could due to lunchtime activities. Another notable increase is observed in the late evening (18:00 - 19:00), possibly indicating leisure or shopping activities after work.
 
 ## 5. Analysis of Vision Algorithm
 
 ### 5.1. Key Adjustments and Insights
 
-Time Adjustment: One critical preprocessing step was adjusting the timestamps of the images by decreasing each of them by 3 hours. This adjustment was important for aligning the dataset with the correct local time zone, as the initial timestamps led to inaccurate interpretations of daily traffic patterns, such as noticing sunrise in images that were incorrectly marked around 9 AM in Pittsburgh, PA, during May. Correcting the time ensured that the analysis of traffic patterns, including peak and low traffic hours, accurately reflected the local context and daily routines.
+**Time Adjustment**: One critical preprocessing step was adjusting the timestamps of the images by decreasing each of them by 3 hours. This adjustment was important for aligning the dataset with the correct local time zone, as the initial timestamps led to inaccurate interpretations of daily traffic patterns, such as noticing sunrise in images that were incorrectly marked around 9 AM in Pittsburgh, PA, during May. Correcting the time ensured that the analysis of traffic patterns, including peak and low traffic hours, accurately reflected the local context and daily routines.
 
-Handling Parked Vehicles with a Borderline: The challenge posed by the long street captured in the dataset was the presence of many parked vehicles, which could potentially effect the analysis of active traffic flow. To solve this, a borderline was implemented to focus the analysis on vehicles in closer proximity to the traffic light. This method effectively filtered out parked cars and other static objects, allowing for a more accurate assessment of traffic dynamics and congestion near the traffic light.
+**Handling Parked Vehicles with a Borderline**: The challenge posed by the long street captured in the dataset was the presence of many parked vehicles, which could potentially effect the analysis of active traffic flow. To solve this, a borderline was implemented to focus the analysis on vehicles in closer proximity to the traffic light. This method effectively filtered out parked cars and other static objects, allowing for a more accurate assessment of traffic dynamics and congestion near the traffic light.
 
-Confidence Score Thresholding for Reliable Detections: an enhancement to the object detection process was the adoption of a confidence score threshold of 0.80 and above for accepting detections. This thresholding was critical in minimizing wrong detections and ensuring that only detections with a high likelihood of accuracy contributed to the analysis.
+**Confidence Score Thresholding for Reliable Detections**: an enhancement to the object detection process was the adoption of a confidence score threshold of **0.80** and above for accepting detections. This thresholding was critical in minimizing wrong detections and ensuring that only detections with a high likelihood of accuracy contributed to the analysis.
 
 ### 5.2. Limitations
 
-Dataset size: The dataset used in this project covers only one week in May 2021, providing a limited snapshot of traffic patterns (the original dataset includes one year of data but requires permission to access it). This range may not capture the variability influenced by seasonal changes, holidays, and special events.
+**Dataset size**: The dataset used in this project covers only one week in May 2021, providing a limited snapshot of traffic patterns (the original dataset includes one year of data but requires permission to access it). This range may not capture the variability influenced by seasonal changes, holidays, and special events.
 
-Ambiguity in Vehicle Classification: The model sometimes classifies the same vehicle in multiple categories, notably with vehicles like pickup trucks being counted as both cars and trucks. This classification challenge could lead to inaccuracies in traffic analysis, as the distinction between personal and commercial vehicle use becomes blurred.
+**Ambiguity in Vehicle Classification**: The model sometimes classifies the same vehicle in multiple categories, notably with vehicles like pickup trucks being counted as both cars and trucks. This classification challenge could lead to inaccuracies in traffic analysis, as the distinction between personal and commercial vehicle use becomes blurred.
 
-Camera Angle: The camera was only capturing one side of the traffic light, it would be more beneficial if the camera had a complete view over the intersection. However, it is worth mentioning that the WALT website provides different datasets featuring various locations and camera angles (See Figure 14).
+**Camera Angle**: The camera was only capturing one side of the traffic light, it would be more beneficial if the camera had a complete view over the intersection. However, it is worth mentioning that the WALT website provides different datasets featuring various locations and camera angles (See Figure 14).
 <br>
 </br>
 <div align="center">
