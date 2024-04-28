@@ -181,8 +181,8 @@ Camera Angle: The camera was only capturing one side of the traffic light, it wo
 
 ## 6. References
 
-  Reddy, N. D., Tamburo, R., & Narasimhan, S. G. (2022). WALT: Watch And Learn 2D amodal representation from Time-lapse imagery. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 9356-9366).
+  1. Reddy, N. D., Tamburo, R., & Narasimhan, S. G. (2022). WALT: Watch And Learn 2D amodal representation from Time-lapse imagery. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 9356-9366).
   
-  Ren, S., He, K., Girshick, R., & Sun, J. (2015). Faster r-cnn: Towards real-time object detection with region proposal networks. Advances in neural information processing systems, 28.
+  2. Ren, S., He, K., Girshick, R., & Sun, J. (2015). Faster r-cnn: Towards real-time object detection with region proposal networks. Advances in neural information processing systems, 28.
 
-  https://www.cs.cmu.edu/~walt/
+  3. https://www.cs.cmu.edu/~walt/
